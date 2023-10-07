@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 // Serve static assets from the 'static' directory
 app.use(express.static(staticPath));
 
-const port = process.env.PORT || 5000; // Use the specified port or 5000 as a default
+const port = process.env.PORT || 5001; // Use the specified port or 5000 as a default
 
 const server = app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
