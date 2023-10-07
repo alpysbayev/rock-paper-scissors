@@ -6,72 +6,32 @@
     <title>Rock, Paper, Scissors</title>
     <style>
         body {
-            background-color: blue; 
+            background-color: #008a37;
             font-family: Arial, sans-serif;
             text-align: center;
-        }
-
-        h1 {
-            color: white;
-            font-size: 36px;
-        }
-
-        #score {
-            color: white;
-            font-size: 24px;
-            margin-top: 20px;
+            margin: 0;
+            padding: 0;
         }
 
         #game-container {
-            background-color: blue; 
+            background-color: #008a37;
             padding: 60px;
             border-radius: 10px;
             margin-top: 100px;
         }
 
-        #round-description {
+        h1 {
             color: white;
-            font-size: 24px;
-        }
-
-        #result {
-            color: white;
-            font-size: 28px;
+            font-size: 36px;
             margin-top: 20px;
         }
 
-        #restart {
-            background-color: #27ae60;
+        h3 {
             color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: none; /* Initially hidden */
-            margin: 0 auto;
+            /* font-size: 36px;
+            margin-top: 20px; */
         }
 
-        #buttons {
-            margin-top: 20px;
-        }
-
-        .btn {
-            background-color: #27ae60;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #219f56;
-        }
-
-        /* Positioning for Metamask and History buttons */
         #metamask-button {
             position: absolute;
             top: 10px;
@@ -97,9 +57,89 @@
             cursor: pointer;
             color: white;
         }
+
+        #accountArea {
+            color: white;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        #round-description {
+            color: white;
+            font-size: 24px;
+        }
+
+        #result {
+            color: white;
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        #restart {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Initially hidden */
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #219f56;
+        }
+
+        /* Style the form elements */
+        label {
+            color: white;
+            font-size: 18px;
+        }
+
+        select, input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        /* Style the play button */
+        #play-button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #play-button:hover {
+            background-color: #219f56;
+        }
     </style>
 </head>
 <body>
+    <h1>Blockchain Pracrices | Assigment 2</h1>
+    <h3>Adilet | Abylay | Adilkhan</h3>
     <h1>Rock, Paper, Scissors</h1>
     <button onclick="connectWallet()" id="metamask-button">Metamask</button>
     <p id="accountArea"></p>
@@ -124,7 +164,7 @@
         </div>
 
         <div>
-            <button onclick="playGame()">Play</button>
+            <button onclick="playGame()" id="play-button">Play</button>
         </div>
 
         <div id="result"></div>
@@ -241,6 +281,5 @@ gameContract = new ethers.Contract(contractAddress, contractABI, signer);
     }
 }
     </script>
-
 </body>
 </html>
